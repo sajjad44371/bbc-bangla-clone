@@ -32,7 +32,7 @@ const Navbar = () => {
               {categories.map((category) => (
                 <NavLink
                   key={category.id}
-                  to={`/category/${category.id}`}
+                  to={`/category/news/${category.id}`}
                   className="border-b-4 border-transparent hover:border-b-rose-800 transition-all px-1 py-3"
                 >
                   {category.title}

@@ -1,6 +1,7 @@
 import React from "react";
 import NewsCard from "./NewsCard";
 import Ads from "./Ads";
+import { Link } from "react-router";
 
 const FeaturedNews = ({ news }) => {
   const sortedAllNews = [...news].sort(
@@ -27,9 +28,12 @@ const FeaturedNews = ({ news }) => {
             alt={liveNewsItem.alt}
             className="w-full h-auto object-cover"
           />
-          <h1 className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer">
+          <Link
+            to={`/category/news/details/${liveNewsItem.id}`}
+            className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer"
+          >
             {liveNewsItem.title}
-          </h1>
+          </Link>
           <p className="text-xl mt-2 text-gray-700 line-clamp-3 leading-8">
             {liveNewsItem.description}
           </p>
@@ -47,9 +51,12 @@ const FeaturedNews = ({ news }) => {
                 alt={newsItem.alt}
                 className="w-full h-32 object-cover"
               />
-              <h2 className="text-xl font-bold mt-2 hover:underline cursor-pointer line-clamp-2 leading-8">
+              <Link
+                to={`/category/news/details/${newsItem.id}`}
+                className="text-xl font-bold mt-2 hover:underline cursor-pointer line-clamp-2 leading-8"
+              >
                 {newsItem.title}
-              </h2>
+              </Link>
               <p className="text-gray-500 text-sm  mt-2">{newsItem.time}</p>
             </div>
           ))}
@@ -60,9 +67,12 @@ const FeaturedNews = ({ news }) => {
       <div className="grid grid-cols-4 gap-3 my-3 ">
         {trendingNewsList.map((newsItem) => (
           <div key={newsItem.id} className="p-2 border-t border-gray-200">
-            <h2 className="text-xl leading-8 font-bold mt-2 hover:underline cursor-pointer line-clamp-2">
+            <Link
+              to={`/category/news/details/${newsItem.id}`}
+              className="text-xl leading-8 font-bold mt-2 hover:underline cursor-pointer line-clamp-2"
+            >
               {newsItem.title}
-            </h2>
+            </Link>
             <p className="text-gray-500 text-sm  mt-2">{newsItem.time}</p>
           </div>
         ))}
@@ -84,9 +94,12 @@ const FeaturedNews = ({ news }) => {
               alt={selectionNews.alt}
               className="w-full h-auto object-cover"
             />
-            <h1 className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer">
+            <Link
+              to={`/category/news/details/${selectionNews.id}`}
+              className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer"
+            >
               {selectionNews.title}
-            </h1>
+            </Link>
             <p className="text-xl mt-2 text-gray-700 line-clamp-3 leading-8">
               {selectionNews.description}
             </p>
@@ -104,9 +117,12 @@ const FeaturedNews = ({ news }) => {
                   alt={newsItem.alt}
                   className="w-full h-32 object-cover"
                 />
-                <h2 className="text-xl font-bold mt-2 hover:underline cursor-pointer line-clamp-2 leading-8">
+                <Link
+                  to={`/category/news/details/${newsItem.id}`}
+                  className="text-xl font-bold mt-2 hover:underline cursor-pointer line-clamp-2 leading-8"
+                >
                   {newsItem.title}
-                </h2>
+                </Link>
                 <p className="text-gray-500 text-sm  mt-2">{newsItem.time}</p>
               </div>
             ))}

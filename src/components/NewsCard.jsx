@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const NewsCard = ({ newsItem }) => {
   return (
@@ -15,10 +16,13 @@ const NewsCard = ({ newsItem }) => {
           />
         </div>
 
-        <div id={newsItem.id} className="mt-3">
-          <h2 className="text-xl font-bold leading-tight cursor-pointer hover:underline hover:text-[#b80000]">
+        <div className="mt-3">
+          <Link
+            to={`/category/news/details/${newsItem.id}`}
+            className="text-xl font-bold leading-tight cursor-pointer hover:underline hover:text-[#b80000]"
+          >
             {newsItem.title}
-          </h2>
+          </Link>
           <p className="mt-2 text-gray-500 text-sm gap-2">{newsItem.time}</p>
         </div>
       </div>
