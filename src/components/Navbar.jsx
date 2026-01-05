@@ -10,7 +10,6 @@ const Navbar = () => {
       .then((res) => res.json())
       .then((data) => setCategories(data.categories));
   }, []);
-  console.log(categories);
 
   return (
     <>
@@ -34,7 +33,7 @@ const Navbar = () => {
                 <NavLink
                   key={category.id}
                   to={`/category/${category.id}`}
-                  className="border-b-4 border-transparent hover:border-red-700 transition-all px-1 py-3"
+                  className="border-b-4 border-transparent hover:border-b-rose-800 transition-all px-1 py-3"
                 >
                   {category.title}
                 </NavLink>
@@ -42,7 +41,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        <div className="advertise h-75 bg-gray-300 flex justify-center items-center">
+        <div className="advertise h-75 bg-gray-200 flex justify-center items-center">
           <div className="content">
             <h2 className="text-4xl">বিজ্ঞাপন</h2>
           </div>
