@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <nav className="max-w-6xl mx-auto px-5 border-b-gray-300">
+        <nav className="max-w-6xl mx-auto px-5 border-b-gray-300 flex justify-between items-center">
           <ul id="category-container">
             <li className="flex items-center gap-5 text-lg">
               {categories.map((category) => (

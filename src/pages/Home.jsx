@@ -31,7 +31,6 @@ const Home = () => {
   return (
     <>
       <FeaturedNews news={news}></FeaturedNews>
-      
     </>
   );
 };
