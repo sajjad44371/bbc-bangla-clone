@@ -31,9 +31,9 @@ const CategoryNews = () => {
   return (
     <>
       <title>খবর</title>
-      <div className="mt-10">
+      <div className="mt-10 px-5">
         <h1 className="uppercase font-bold text-3xl mb-3">{id}</h1>
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {news?.map((newsItem) => (
             <NewsCard key={newsItem.id} newsItem={newsItem}></NewsCard>
           ))}

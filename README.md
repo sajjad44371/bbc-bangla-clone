@@ -1,16 +1,34 @@
-# React + Vite
+# BBC Bangla Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a functional and responsive clone of the **BBC Bangla** news website. I built this project to practice dynamic routing, API data fetching, and modern UI design using the React ecosystem.
 
-Currently, two official plugins are available:
+## Project Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I build this project using (vite + react), also using react router, tailwindcss, react icons etc.
 
-## React Compiler
+## Folder Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+src/
+├── assets/ # Static files like images and BBC favicon
+├── components/ # Reusable components (NewsCard, Spinner, Footer, etc.)
+├── pages/ # Main pages
+├── layouts/ # Pages layout
+├── App.jsx # Main app component & Routing setup
+├── index.css # Global styles & Tailwind directives
+└── main.jsx # Entry point
+public/
+└── \_redirects # Netlify redirect rules for React Router
 
-## Expanding the ESLint configuration
+## Key Decisions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-Vite: I used Vite as the build tool because it is significantly faster than Create React App for local development.
+
+-React Router: I implemented dynamic routing using :id parameters. This allows the app to load different news categories (like Politics, Sports, or World) using a single dynamic component.
+
+-Tailwind CSS: I used Tailwind for all the styling. It helped me easily create the BBC signature look, including the horizontal scrolling menu for mobile users.
+
+-React Icons: I used this library for social media and UI icons because it provides a huge collection and is very easy to style.
+
+-Netlify Deployment: Since this is a Single Page Application (SPA), I added a \_redirects file to the public folder. This ensures that when a user refreshes the page on a specific route, they don't get a 404 error.
+
+## Live Link: ()
