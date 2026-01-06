@@ -31,4 +31,4 @@ public/
 
 -Netlify Deployment: Since this is a Single Page Application (SPA), I added a \_redirects file to the public folder. This ensures that when a user refreshes the page on a specific route, they don't get a 404 error.
 
-## Live Link: ()
+## Live Link: (https://bbc-bangla-clone.netlify.app/)
