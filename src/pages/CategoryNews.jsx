@@ -30,6 +30,7 @@ const CategoryNews = () => {
   }
   return (
     <>
+      <title>খবর</title>
       <div className="mt-10">
         <h1 className="uppercase font-bold text-3xl mb-3">{id}</h1>
         <div className="grid grid-cols-4 gap-5">
