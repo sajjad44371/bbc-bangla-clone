@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router";
 import NewsCard from "../components/NewsCard";
+import Spinner from "../components/Spinner";
 
 const CategoryNews = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const CategoryNews = () => {
 
   // Loading state handling
   if (news?.length === 0) {
-    return <div className="text-center py-20">Loading...</div>;
+    return <Spinner></Spinner>;
   }
   return (
     <>
