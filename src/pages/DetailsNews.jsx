@@ -15,9 +15,9 @@ const DetailsNews = () => {
 
   return (
     <>
-      <div className="">
+      <div className="px-5">
         <div className="">
-          <h2 className="text-4xl font-bold leading-15 py-5">
+          <h2 className="text-2xl md:text-4xl font-bold leading-10 md:leading-15 py-5">
             {details?.title}
           </h2>
           <img
@@ -25,8 +25,12 @@ const DetailsNews = () => {
             alt={details?.title}
             className="object-cover w-full"
           />
-          <p className="py-5 text-xl text-gray-500">{details?.timestamp}</p>
-          <p className="text-2xl leading-10">{details?.content}</p>
+          <p className="py-5 text-lg sm:text-xl text-gray-500">
+            {details?.timestamp}
+          </p>
+          <p className="text-lg leading-8 sm:text-xl sm:leading-9 md:text-2xl md:leading-10">
+            {details?.content}
+          </p>
         </div>
       </div>
     </>

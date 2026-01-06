@@ -19,7 +19,7 @@ const NewsCard = ({ newsItem }) => {
         <div className="mt-3">
           <Link
             to={`/category/news/details/${newsItem.id}`}
-            className="text-xl font-bold leading-tight cursor-pointer hover:underline hover:text-[#b80000]"
+            className="text-xl font-bold leading-tight cursor-pointer hover:underline"
           >
             {newsItem.title}
           </Link>

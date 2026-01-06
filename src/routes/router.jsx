@@ -22,11 +22,15 @@ const router = createBrowserRouter([
         path: "/category/news/details/:id",
         Component: DetailsNews,
       },
+      {
+        path: "*",
+        element: (
+          <div className="text-center text-red-400 text-4xl py-6">
+            404 Not Found
+          </div>
+        ),
+      },
     ],
-  },
-  {
-    path: "*",
-    element: <div>404 Not Found</div>,
   },
 ]);
 

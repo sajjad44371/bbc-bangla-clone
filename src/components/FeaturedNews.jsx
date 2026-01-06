@@ -19,18 +19,18 @@ const FeaturedNews = ({ news }) => {
     <div className="max-w-6xl mx-auto py-5">
       {/* grid layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="p-2">
+        <div className="px-5 md:px-2">
           <img
             src={
               liveNewsItem.image?.srcset?.[8]?.url ||
               liveNewsItem.image?.srcset?.[0]?.url
             }
             alt={liveNewsItem.alt}
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover mb-5"
           />
           <Link
             to={`/category/news/details/${liveNewsItem.id}`}
-            className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer"
+            className="text-3xl font-bold leading-10 hover:underline cursor-pointer"
           >
             {liveNewsItem.title}
           </Link>
@@ -40,7 +40,7 @@ const FeaturedNews = ({ news }) => {
           <p className="text-gray-500 text-sm mt-2">{liveNewsItem.time}</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2 px-3 md:px-2">
           {featuredNewsList.map((newsItem) => (
             <div key={newsItem.id} className="p-2 border-b md:border-none">
               <img
@@ -64,7 +64,7 @@ const FeaturedNews = ({ news }) => {
       </div>
 
       {/* trending news */}
-      <div className="grid grid-cols-4 gap-3 my-3 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 my-5 px-2">
         {trendingNewsList.map((newsItem) => (
           <div key={newsItem.id} className="p-2 border-t border-gray-200">
             <Link
@@ -82,7 +82,7 @@ const FeaturedNews = ({ news }) => {
       <Ads></Ads>
 
       {/* selection news  */}
-      <div className="mt-10 ">
+      <div className="mt-10 px-5 md:px-2">
         <h2 className="text-2xl font-bold pb-4">নির্বাচিত খবর</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <div className="p-2">
@@ -92,11 +92,11 @@ const FeaturedNews = ({ news }) => {
                 selectionNews.image?.srcset?.[0]?.url
               }
               alt={selectionNews.alt}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover mb-5"
             />
             <Link
               to={`/category/news/details/${selectionNews.id}`}
-              className="text-3xl font-bold leading-10 mt-3 hover:underline cursor-pointer"
+              className="text-3xl font-bold leading-10 hover:underline cursor-pointer"
             >
               {selectionNews.title}
             </Link>
@@ -134,9 +134,9 @@ const FeaturedNews = ({ news }) => {
       <Ads></Ads>
 
       {/* remaining news */}
-      <div className="mt-12">
+      <div className="mt-12 px-5 mb-10">
         <h2 className="text-2xl font-bold pb-4">অন্যান্য খবর</h2>
-        <div className="grid grid-cols-4 gap-6 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 ">
           {remainingNews.map((newsItem) => (
             <NewsCard key={newsItem.id} newsItem={newsItem}></NewsCard>
           ))}

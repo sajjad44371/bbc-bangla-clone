@@ -26,8 +26,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        <nav className="max-w-6xl mx-auto px-5 border-b-gray-300 flex justify-between items-center">
-          <ul id="category-container">
+        <nav className="max-w-6xl mx-auto px-5 border-b-gray-300 flex justify-between items-center relative">
+          <ul className="overflow-x-auto no-scrollbar whitespace-nowrap ">
             <li className="flex items-center gap-5 text-lg">
               {categories.map((category) => (
                 <NavLink
@@ -40,7 +40,9 @@ const Navbar = () => {
               ))}
             </li>
           </ul>
+          <div className="absolute right-0 top-0 bottom-0 w-12 bg-linear-to-l from-[#a2a2a2] to-transparent pointer-events-none md:hidden"></div>
         </nav>
+
         <div className="advertise h-75 bg-gray-200 flex justify-center items-center">
           <div className="content">
             <h2 className="text-4xl">বিজ্ঞাপন</h2>
